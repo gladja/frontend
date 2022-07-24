@@ -1,2 +1,2 @@
 git
-add new readme
+add new readmegit 
