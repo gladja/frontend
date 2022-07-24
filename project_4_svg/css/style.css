@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    background-image: url(../images/bg-top.png);
+    margin-top: -22px;
+    background-size: cover;
+    background-position: top, center;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+}
+.header__container{
+    text-align: center;
+}
+.header__name{
+    font-family: 'Roboto Slab', serif;font-size: 95px;
+    color: white;
+    font-weight: 700;
+    margin-top: 0;
+    padding-top: 40px;
+    margin-bottom: 25px;
+}
+.header__skill{
+    font-family: 'Open Sans', sans-serif;
+    color: #78bef5;
+    text-transform: uppercase;
+    font-size: 43px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.header__contacts{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #626676;
+    font-size: 20px;
+    font-weight: 600;
+    border-top: 20px solid #e7e7e7;
+    border-bottom: 20px solid #e7e7e7;
+    justify-content: space-between;
+    height: 145px;
+}
+.header_contacts-item{
+    margin: auto;
+    position: relative;
+    padding-left: 80px;
+}
+.item-phone{
+    position: absolute;
+    left: 0;
+    top: -5px
+}
+.item-adress{
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.item-email{
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+.item-site{
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+.header__img{
+    width: 350px;
+    border-radius: 50%;
+    margin: 40px 0 60px;
+    border: 20px solid #e7e7e7; 
+}
+
+.container {
+    max-width: 1965px;
+    margin: auto;
+}
+.objective__title {
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(44, 169, 240);
+    text-transform: uppercase;
+    line-height: 0.938; 
+    text-align: center;  
+    margin-bottom: 50px;  
+}
+.objective__describe {
+    font-size: 33px;
+    font-family: 'Open Sans';
+    color: rgb(45, 49, 65);
+    line-height: 1.375;
+    font-weight: 300;
+    text-align: center;
+    width: 1150px;
+    margin: auto;
+    margin-bottom: 100px;
+    font-weight: 400;
+    line-height: 60px;
+
+}
+.timelines {
+    margin-bottom: 100px;
+}
+.timelines__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.timelines__inner-work {
+    max-width:750px;
+    
+}
+.timelines__inner-edu{
+    max-width:750px;
+}
+.timelines__title {
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(44, 169, 240);
+    text-transform: uppercase;
+    line-height: 0.938;
+    margin-bottom: 50px;
+}
+.timelines__item-item {
+}
+.item + .item {
+margin-top: 115px;
+}
+.item__title {
+    font-size: 38px;
+    font-family: 'roboto slab', serif;
+    color: rgb(45,49,65);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.item__spec {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(139, 144, 163);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+.item__spec-place, .item__spec-period {
+    padding-left: 50px;
+    margin-right: 65px;
+    position: relative;
+}
+.item__spec-place span::before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    background-image: url(../images/icons/place.svg);
+    position: absolute;
+    left: 0;
+}
+.item__spec-period span::before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    background-image: url(../images/icons/period.svg);
+    position: absolute;
+    left: 0;
+}
+.item__describe {
+    font-size: 33px;
+    font-family: 'Open Sans';
+    color: rgb(45, 49, 65);
+    line-height: 1.375;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+
+.skills {
+    height: 850px;
+    background-color: #1367b3;
+    padding: 0 0 0 220px;
+}
+.title__skills {
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(44, 169, 240);
+    text-transform: uppercase; 
+    padding: 100px 0 0 0;
+}
+.tabl__skills {
+    display: flex;
+    justify-content: space-around;    
+}
+.column {
+    width: 500px;
+}
+.soft {
+    font-family: roboto slab;
+    font-size: 34px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.lvl {
+    background: #114777;
+    height: 20px;
+    width: 35vh;
+    border-radius: 10px 10px;
+}
+.lvl_2 {
+    background: #3d9ff8;
+    height: 20px;
+    width: 30vh;
+    border-radius: 10px 10px;
+    margin-top: -20px;
+}

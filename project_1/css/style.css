@@ -1,0 +1,40 @@
+/* gladja */
+body{
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    font-size: 48px;
+    font-weight:900;
+}  
+h2{
+    font-size: 36px;
+    font-weight: 400;
+    color: #808080;
+}
+h1,h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    background-color: #808080;
+    color: #e3e3e3;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 29px;
+    padding-top: 29px;  
+    padding-right: 52px;
+    padding-left: 52px;
+    padding-bottom: 43px;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+}
+h3{
+    font-size: 50px;
+    text-align:center;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
