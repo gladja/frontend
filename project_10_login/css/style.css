@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.login__items {
+    width: 1000px;
+    height: 1000px;
+    align-items: center;
+    margin: auto;
+    background-image: url(../images/bg.svg);
+    margin-top: 5vh;
+    padding: 130px;
+}
+.sign {
+    width: 730px;
+    height: 730px;
+    background: #e1e1e1;
+    align-items: center;
+    margin: auto;
+}
+.close {
+    background-image: url(../images/close.svg);
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 690px;
+    
+}
+h1 {
+    font-size: 52px;
+    color: #343844;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 15px;
+}
+p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+.sign_up {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 6px;       
+}
+.sign__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    
+}
+.sign__items-form {
+    display: flex;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.item-user {
+    background-color: #e65748; 
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 75px;
+    background-image: url(../images/user.svg);
+    background-position: center;  
+    background-repeat: no-repeat;  
+}
+.item-password {
+    background-color: #e65748; 
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 75px;
+    background-image: url(../images/lock.svg);
+    background-position: center;  
+    background-repeat: no-repeat;  
+}
+.forms {
+    color: #c4c4c4;
+    border: 0;
+    height: 90px;
+    width: 490px;
+    margin-left: 75px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+.item-password-see {
+    background-color: #fff; 
+    width: 90px;
+    height: 90px;
+    position: relative;
+    right: 75px;
+    background-image: url(../images/passw.svg);
+    background-position: center;  
+    background-repeat: no-repeat;
+    border: 0;
+}
+.sign_in {
+    background-color: #e65748;
+    border: 0;
+    height: 90px;
+    width: 275px;
+    margin-left: 75px;
+    font-size: 41px;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    line-height: 80px;
+}
+.design {
+    margin-top: 50px;
+    margin-left: 230px;
+
+    
+
+}
