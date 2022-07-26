@@ -115,10 +115,29 @@ p {
     color: #fff;
     line-height: 80px;
 }
+
 .design {
     margin-top: 50px;
     margin-left: 230px;
-
+}
+.option {
+    width: 30px;
+    height: 30px;
+    margin-top: 60px;
+    margin-left: 100px;
+    background #344242;
+}
+.remember {
+    font-size: 20px;
+    color: #343844;
+    margin-top: 60px;
+    text-align: right;
+}
+.forgot {
+    text-decoration: none;
+    font-size: 20px;
+    color: #343844;
+    line-height: 100px;
+    text-align: right;
     
-
 }
