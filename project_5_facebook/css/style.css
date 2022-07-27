@@ -50,9 +50,10 @@ body {
     padding-left: 10px;
     border: 1px solid #dddfe2;
 }
-/* .forms:hover {
-    border: 1px solid #1877f2;
-} */
+.forms:focus {
+    outline: none;
+    border-color:  #1877f2;
+}
 .btn_enter {
     height: 48px;
     width: 364px;
