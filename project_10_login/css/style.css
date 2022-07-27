@@ -118,10 +118,6 @@ p {
     line-height: 80px;
 }
 
-.design {
-    margin-top: 50px;
-    margin-left: 230px;
-}
 .option {
     width: 30px;
     height: 30px;
@@ -141,5 +137,9 @@ p {
     color: #343844;
     line-height: 100px;
     text-align: right;
-    
+}
+.design {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
