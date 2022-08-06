@@ -46,7 +46,7 @@ header {
 .bg__vg::after {
     content: "";
     display: block;    
-	width: 1920px;
+	max-width: 1920px;
 	height: 1200px;    
 	/* position: absolute; */
 	/* top: 0px;       */
@@ -230,19 +230,53 @@ section {
     max-width: 1462px;
     height: 720px;
     top: 450px;
-
+    margin-bottom: 200px;
 }
 .objective__item-text {
+    max-width: 896px;
+    margin-left: 110px;
+}
+.objective__item-text-right {
     width: 896px;
+    margin-left: 220px;
 }
 .objective__item-img {
     /* background: url(../images/01.png); */
     /* z-index: 1; */
     position: relative;
     background-repeat: no-repeat;
+    top: -100px;
+}
+.object__item-text01 {
+    position:absolute;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: sans-serif;
+    font-size: 240px;
+    font-weight: 700;
+    margin-top: -120px;
+    margin-left: -140px;
 }
 .object__item-text02 {
     color: #fff;
     font-size: 88px;
     width: 700px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.object__item-text03 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 700px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.object__item-text04 {
+    color: #FBD784;
+    font-family: sans-serif;
+    font-size: 18px;  
+}
+.object__item-navigation {
+    margin-left: 20px;
 }
