@@ -15,7 +15,7 @@ body {
 header::before {
     content: "";
     display: block;    
-	width: 1920px;
+	width: 100%;
 	height: 1200px;    
 	position: absolute;
 	top: 0;      
@@ -46,7 +46,7 @@ header {
 .bg__vg::after {
     content: "";
     display: block;    
-	max-width: 1920px;
+	max-width: 100%;
 	height: 1200px;    
 	/* position: absolute; */
 	/* top: 0px;       */
@@ -216,13 +216,13 @@ header {
 section {
     background: rgb(11, 29, 38);
     max-width: 1920px;
-    height: 3200px;
+    height: 3100px;
     z-index: -1;
     margin: 0 auto;
 }
 .objective__item {
     display: flex;
-    /* justify-content: center; */
+    justify-content:space-between;
     position:relative;
     margin: 0 auto;
     /* align-items: center; */
@@ -246,6 +246,8 @@ section {
     position: relative;
     background-repeat: no-repeat;
     top: -100px;
+    max-width: 566px;
+    width: 100%;
 }
 .object__item-text01 {
     position:absolute;
@@ -279,4 +281,65 @@ section {
 }
 .object__item-navigation {
     margin-left: 20px;
+}
+
+/* footer */
+footer {
+    background: rgb(11, 29, 38);
+    max-width: 1920px;
+    height: 400px;
+    z-index: -1;
+    margin: 0 auto;
+}
+.footer {
+    background: rgb(11, 29, 38);
+    display: flex;
+    max-width: 1462px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.footer__items-block01 {
+
+}
+.footer__items-text{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 300px;
+    line-height: 30px;
+    padding-top: 30px;
+}
+.footer__items-copyright {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    /* font-weight: 700; */
+    opacity: 0.5;
+    padding-top: 130px;
+}
+.footer__items-block02 {
+    display: flex;
+    justify-content: space-between;
+    width: 566px;
+}
+.link__items-about {
+    color: #FBD784;
+    font-family: sans-serif;
+    font-size: 24px;  
+    font-weight: 700;
+}
+.link__menu {
+    list-style: none;
+    padding-inline-start: 0;
+}
+.link__items {
+    list-style: none;
+}
+.link__items-text {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    line-height:50px;
 }
