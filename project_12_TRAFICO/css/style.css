@@ -1,0 +1,25 @@
+/* general style */
+* {
+    box-sizing: border-boxc;
+}
+body {
+    margin: 0;
+    background: #E5E5E5;
+    /* background: #000; */
+}
+.section {
+    background-image: url(../images/Scene.png);
+}
+.conteiner {
+    max-width: 1100px;
+    height: 900px;
+    margin: 0 auto;
+}
+/* menu */
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+.menu__list {
+    display: flex;
+}
