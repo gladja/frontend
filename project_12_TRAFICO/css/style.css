@@ -4,22 +4,294 @@
 }
 body {
     margin: 0;
-    background: #E5E5E5;
-    /* background: #000; */
-}
-.section {
-    background-image: url(../images/Scene.png);
+    background: #FEF8F5;
 }
 .conteiner {
     max-width: 1100px;
-    height: 900px;
+    /* height: 1000px; */
     margin: 0 auto;
 }
-/* menu */
+
+/* header menu */
+.section {
+    background-image: url(../images/Scene.png);
+    background-repeat: no-repeat;
+}
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.menu__logo {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 115px;
+    /* width: 250px; */
+}
+.menu__logo-text {
+    text-decoration: none;
+    color: #fff;
+    text-align: right;
+    padding-left: 30px;
+}
+.menu__logo-img {
+    Width: 16px;
+    Height: 17px;
+    padding-top: 10px;
+    position: relative;
+    top: -26px;
+}
+.menu__logo-img2 {
+    Width: 31px;
+    Height: 33px;
+    padding-top: 10px;
+    position: relative;
+    top: 8px;
+    left: -7px;
 }
 .menu__list {
     display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    list-style: none;
+    align-items: center;
+}
+.menu__list-item {
+    margin: 0 50px;
+}
+.menu__list-text {
+    text-decoration: none;
+    color: #fff;
+}
+.menu__list-contact {
+    border: 1px solid #EE4D47;
+    background: #EE4D47;
+    border-radius: 5px;
+    width: 158px;
+    height: 60px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* header title */
+h1 {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 100px;
+    color: #FFFFFF;
+    width: 740px;
+    line-height: 105px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}   
+
+/* header button */
+button {
+    border: 1px solid #EE4D47;
+    background: #EE4D47;
+    border-radius: 5px;
+    width: 220px;
+    height: 60px;
+    font-family: 'Rubik';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+.button__text {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: -10px;
+
+}
+.button-img {
+    position: relative;
+    left: 24px;
+}
+
+/* header img-car */
+.menu__logo-car {
+    background-image: url(../images/mobel.png);
+    background-repeat: no-repeat;
+    top: 190px;
+    position: relative;
+    height: 395px;
+}
+
+/* content */
+.section2 {
+    margin-top:350px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+h3 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #EE4D47;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+}
+.conteinet__item-text01 {
+    font-family: 'Rubik', sans-serif;
+    font-weight:300;
+    font-size: 18px;
+    color: #402b2b;
+    width: 460px;
+    line-height: 45px;
+    margin-bottom: 70px;
+}
+.conteinet__item-text02 {
+    font-family: 'Rubik', sans-serif;
+    font-weight:500;
+    font-size: 24px;
+    color: #402b2b;
+    width: 460px;
+    line-height: 36px; 
+    border-left: 10px solid #EE4D47;
+    background-color: #fcddd4;
+    padding: 30px 55px;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 260px;
+}
+.content__item02 {
+    position: relative;
+    left: -100px;
+}
+.content__img {
+    position: relative;
+    top: -60px;
+}
+.content__img2 {
+    position: relative;
+    top: -100px;
+    left: -140px;
+    width: 800px;
+}
+
+/* FAQ */
+.section3 {
+    background-image: url(../images/Rectangle\ 9.png);
+    background-repeat: no-repeat;
+    /* position: relative;
+    top: -170px; */
+    /* right: 10px; */
+    background-position: right;
+}
+.faq__item-title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 48px;
+    color: #402B2B;
+    width: 550px;
+    position: relative;
+}
+.faq {
+    display: flex;
+    justify-content: space-between;
+}
+.faq__item {
+    padding-top: 200px;
+}
+.faq__img {
+    padding-top: 100px;
+
+}
+.faq__questions {
+    display: flex;
+    justify-content: space-between;
+}
+.faq__question-item {
+font-family: 'Rubik';
+font-weight: 500;
+font-size: 18px;
+line-height:30px;
+padding-left: 35px;
+color: #402B2B;
+align-items: center;
+
+
+border: 1px solid #fff;
+background: #FFFFFF;
+box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+border-radius: 10px;
+width: 500px;
+height: 90px;
+margin-bottom: 10px;
+
+display: flex;
+justify-content: space-between;
+}
+.faq__question-item02 {
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 18px;
+    line-height:30px;
+    padding-left: 35px;
+    color: #402B2B;
+    align-items: center;
+
+    /* border: 1px solid #fff; */
+    /* background: #FFFFFF; */
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.2);
+    border-radius: 0 0 10px 10px;
+    width: 500px;
+    height: 160px;
+
+    display: flex;
+    margin-top: -12px;
+    margin-bottom: 55px;
+}
+.faq__question-item03 {
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 18px;
+    line-height:30px;
+    padding-left: 35px;
+    color: #ED4D47;
+    align-items: center;
+    text-transform: uppercase;
+
+    background-color: rgba(237, 77, 71, 0.2);
+    border-radius: 10px;
+    width: 500px;
+    height: 90px;
+    
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 200px;
+}
+.faq__question-text {
+    width: 400px;
+}
+.faq__question-img {
+    position: relative;
+    top: 5px;
+    left: -30px;
+}
+.faq__question-text03 {
+    width: 500px;
+    text-align: center;
+}
+
+/* slider */
+.slider {
+    margin-top: 230px;
+}
+.slider__item-title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 48px;
+    color: #402B2B;
+    width: 300px;
+    /* position: relative; */
 }
