@@ -284,8 +284,29 @@ justify-content: space-between;
 }
 
 /* slider */
+.section4 {
+    margin-bottom: 230px;
+}
 .slider {
+    display: flex;
     margin-top: 230px;
+}
+.slider__line {
+    width: 65px;
+    height: 6px;
+    background: #EE4D47;
+    border-radius: 20px;
+    position: relative;
+    /* left: 240px; */
+    top: -40px; 
+}
+.slider__arrow {
+    position: relative;
+    left: 1000px;
+    top: -70px;
+}
+.slider__item-arrow {
+    margin-right: 30px;
 }
 .slider__item-title {
     font-family: 'DM Serif Display';
@@ -293,5 +314,182 @@ justify-content: space-between;
     font-size: 48px;
     color: #402B2B;
     width: 300px;
-    /* position: relative; */
+    position: relative;
+    margin-right: 50px;
+}
+.slider__item-element {
+    width: 420px;
+    height: 360px;
+    margin-top: 100px;
+    margin-right: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+}
+
+.slider__item-text {
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    color: #402B2B;
+    width: 320px;
+    height: 180px;
+    margin-top: 60px;
+    margin-left: 48px;
+    margin-right: 52px;
+}
+.slider__item-img {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #402B2B;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 48px;
+    top: 20px;
+    text-indent:20px;
+}
+
+/* footer */
+.section5 {
+    background-image: url(../images/BG.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 800px;
+
+}
+.form__item-img {
+    background-image: url(../images/Group\ 35.png);
+    background-repeat: no-repeat;
+    width: 489.2px;
+    height: 209px;
+    position: relative;
+    top: 40px;
+    left: 0;
+    
+}
+.form__item-imgBg {
+    background-image: url(../images/Mask\ Group.png);
+    background-repeat: no-repeat;
+    width: 1033px;
+    height: 466px;
+    position: relative;
+    left: 0;
+    top: -580px;
+    z-index: 0;
+    
+
+}
+.form {
+    display: flex;
+}
+.form__item-text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    width: 330px;
+    height: 160px;
+    line-height: 36px;
+    border-left: 10px solid #EE4D47;
+    padding: 30px 55px;
+    border-radius: 5px 0 0 5px;
+    position: relative;
+    top: 70px;
+    margin-right: 15px;
+}
+.form__login {
+    position: relative;
+    width: 550px;
+    height: 440px;
+    left: 10px;
+    top:-100px;
+    z-index: 1;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+}
+.form__item-login {
+    margin-top: 30px;
+    margin-left: 72px;
+}
+.form__item-loginText {
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 40px;
+    color: #402B2B;
+    margin-bottom: 15px;
+}
+
+.form__item-loginName {
+    width: 400px;
+    height: 60px;
+
+    background: #FFFFFF;
+    border: 2px solid #EE4D47;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.2);
+    border-radius: 5px; 
+
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #402B2B;
+    text-indent: 40px;
+    margin-bottom: 30px;
+
+}
+
+.menu-footer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 60px;
+}
+.menu__logo-footer {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+    /* line-height: 15px; */
+    /* width: 250px; */
+}
+.menu__list-footer {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    font-weight:400;
+    font-size: 16px;
+    text-transform: uppercase;
+    list-style: none;
+}
+.menu__list-item-footer {
+    margin: 0 50px;
+}
+.menu__list-text-footer {
+    text-decoration: none;
+    color: #fff;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 220px;
+}
+.copyright__item-text {
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 40px;
+    color: #402B2B;
+
+}
+.copyright__item {
+    margin-right: 20px;
+}
+.copyright__item-social {
+    margin-right: 30px;
 }
