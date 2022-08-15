@@ -1,33 +1,25 @@
-let number=5;
-// alert(number);
+function myFirstApp(name, age) {
+    alert(`Привет, меня зовут ${name} и это моя первая программа!`);
 
-// let num=10;
-// num=7;
+    function showSkills() {
+        let skills = ['html', 'css', 'js'];
+        for (let i = 0; i < skills.length; i += 1) {
+        console.log('Я владею: ', skills[i]);
+        }
+    }
+    showSkills();
 
+    function checkAge() {
+        let age = prompt('Какой ваш воззраст:');
+        if(age < 18) {
+            alert ('Круто что ты так рано задумался о своем будущем!');
+        } else {
+            alert('У тебя отличные шансы стать FrontEnd dev!');
+        }
+    }
+    checkAge()
 
-// const pi = 3.14;
-
-// let modal;
-// console.log(modal);
-
-// console.log( 4 + '4');
-
-
-// let x = 4;
-// x--;
-// console.log(x)
-
-// let answer = confirm('you heve 18 year?');
-// console.log(answer);
-
-//let answer = prompt('you heve 18 year?','');
-//console.log(answer);
-
-let answers = [];
-
-answers[0] = prompt('Whot is your first name?','');
-answers[1] = prompt('Whot is your last name?','');
-answers[2] = prompt('How old are you?','');
-
-// console.log(answers);
-document.write(answers);
+    function calcPow(num) {
+        
+    }
+}
