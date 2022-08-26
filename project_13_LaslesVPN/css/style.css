@@ -96,7 +96,7 @@ body {
     background-image: url(../images/Illustration\ 1.png);
     background-size: 610px 380px;
     background-repeat: no-repeat;
-    background-position: 600px 40px;
+    background-position: 530px 40px;
     z-index: 100;
     
 }
@@ -622,6 +622,7 @@ justify-content: space-between;
     line-height: 30px;
     color: #0B132A;
     margin-bottom: 20px;
+
 }
 
 .link__menu {
