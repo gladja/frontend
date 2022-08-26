@@ -412,7 +412,7 @@ span {
 /* Trusted by Thousands of Happy Customer */
 .slider {
     padding-top: 50px;
-    height: 800px;
+    height: 810px;
 }
 
 .slider__item {
@@ -532,8 +532,114 @@ justify-content: space-between;
 .subs {
     display: flex;
     justify-content: space-around;
-    margin: -100px auto;
+    margin: -109px auto;
     width: 1140px;
     align-items: center;
     background: #ffffff;
+    position: relative;
+    
+}
+
+/* footer */
+.conteiner3 {
+    max-width: 1440px;
+    height: 564px;
+    margin: 0 auto;
+    background-color: #efefef;
+    z-index: -1;
+}
+
+.footer {
+    padding-top: 235px;
+    display: flex;
+    margin: 0 auto;
+    width: 1140px;
+    display: flex;
+}
+
+.footer__column01{
+    width: 570px;
+}
+
+.footer__text {
+    width: 340px;
+    height: 61.57px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F5665;
+    margin-top: 20px;
+}
+
+.footer__social {
+    width: 230px;
+    margin-top: 20px;
+
+}
+
+
+.footer__social-f {
+    position: relative;
+    top: 10px;
+    left:-20px;
+}
+
+.footer__social-t {
+    position: relative;
+    top: 10px;
+    left: -40px;
+}
+
+.footer__social-i {
+    position: relative;
+    top: 10px;
+    left: -60px;
+}
+
+.footer__copir {
+    width: 132px;
+    height: 30px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #AFB5C0;
+    margin-top: 18px;
+}
+
+.footer__column02 {
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+}
+
+.link__items-about {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #0B132A;
+    margin-bottom: 20px;
+}
+
+.link__menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.link__items {
+    margin-bottom: 10px;
+}
+
+.link__items-text {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F5665;
+    text-decoration: none;
+    margin-bottom: 10px;
 }
