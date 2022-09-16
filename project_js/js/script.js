@@ -292,7 +292,7 @@ const generator = sequence(10, 3);
 sequence(7, 2);
 //-----------------------------------------------err
 
-
+//codewar
 
 // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
 // Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
@@ -328,6 +328,180 @@ paperwork(5, 5);
 
 //Просто удалите пробелы из строки, затем верните результирующую строку.
 function noSpace(x) {
+  //перебор строки метод 'fot of'
+  // for (let str of x) {
+  //     console.log(str);
+  // }
+  // console.log(x.replace(/ /g, ''));
+  return x.replace(/ /g, '');
 
+  //можно через преобразование в масив 'split', а потом в строку 'join'
+  //console.log(x.split(' ').join(''));
 }
 noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
+//or
+function noSpace(x) {
+  var result = ""
+  for (var index = 0; index < x.length; index++) {
+    if (x[index] !== " ") {
+      result += x[index];
+    }
+  }
+  return result;
+}
+noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
+//-----------------------------------------------ok
+
+
+
+// Make a simple function called greet that returns the most-famous "hello world!".
+function greet(m = 'hello world!') {
+  return m;
+}
+greet();
+// or
+function greet() {
+  return "hello world!";
+}
+//-----------------------------------------------ok
+
+
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+function repeatStr(n, s) {
+  let newStr = ('');
+  for (let i = 0; i < n; i++) {
+    newStr += s;
+    // console.log(i);
+    // console.log(newStr);
+  }
+  return newStr;
+}
+repeatStr(6, 'I');
+//or
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+repeatStr(6, 'I');
+//or
+repeatStr = (n, s) => s.repeat(n) // как выводить стрелочную функцию!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//-----------------------------------------------ok
+
+
+
+// Write a function which calculates the average of the numbers in a given list. Note: Empty arrays should return 0.
+function findAverage(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum = sum + array[i];
+    // console.log(sum);
+  }
+  sum = sum / array.length;
+  return sum;
+}
+findAverage([1, 2, 3, 4]);
+//or
+function findAverage(array) {
+  let arr = array.reduce(function (a, b) {
+    return a + b;
+  });
+  arr = arr / array.length;
+  // console.log(arr);
+  return arr;
+}
+findAverage([1, 2, 3, 4]);
+//-----------------------------------------------ok
+
+
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1 ^ 2 + 2 ^ 2 + 2 ^ 2 = 9.
+function squareSum(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    // console.log(numbers[i] ** 2);
+    sum += numbers[i] ** 2;
+    // console.log(sum);
+  }
+  return sum
+}
+squareSum([1, 2, 2]);
+//or
+function squareSum(numbers) {
+  return numbers.reduce(function (sum, n) {
+    return (n * n) + sum;
+  }, 0)
+}
+squareSum([1, 2, 2]);
+//or
+function squareSum(numbers) {
+  let sum = 0;
+  numbers.forEach(function (n) {
+    sum += n * n
+  });
+  return sum;
+}
+squareSum([1, 2, 2]);
+//-----------------------------------------------ok
+
+
+
+// Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+// Numerical Score	Letter Grade
+// 90 <= score <= 100	'A'
+// 80 <= score < 90	'B'
+// 70 <= score < 80	'C'
+// 60 <= score < 70	'D'
+// 0 <= score < 60	'F'
+// Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+function getGrade(s1, s2, s3) {
+  let sum = (s1 + s2 + s3) / 3;
+  console.log(sum);
+  if (90 <= sum && 100 >= sum) {
+    return 'A';
+  } else if (80 <= sum && 90 >= sum) {
+    return 'B';
+  } else if (70 <= sum && 80 >= sum) {
+    return 'C';
+  } else if (60 <= sum && 70 >= sum) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
+getGrade(95, 90, 93);
+//or
+function getGrade(s1, s2, s3) {
+  var s = (s1 + s2 + s3) / 3
+  return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
+}
+getGrade(95, 90, 93);
+
+//-----------------------------------------------ok
+
+
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+function removeChar(str) {
+  return str.slice(1, -1);
+};
+removeChar('eloquent');
+//or
+function removeChar(str) {
+  //You got this!
+  str1 = str.split('');
+  str1.shift();
+  str1.pop();
+  return str1.join('');
+}
+removeChar('eloquent');
+//or
+function removeChar(str) {
+  return str.substring(1, str.length - 1);
+}
+removeChar('eloquent');
+//-----------------------------------------------ok
+
+
+
+
+
