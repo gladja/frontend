@@ -503,5 +503,87 @@ removeChar('eloquent');
 
 
 
+// You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+function positiveSum(arr) {
+  let sum = 0;
+  for (let num of arr) {
+    // console.log(num);
+    if (num > 0) {
+      sum += num;
+      // console.log(sum);
+      // return sum; // почему вывод 1 одна итерация
+    }
+    // return sum; // почему вывод 1 одна итерация
+  }
+  return sum;
+}
+positiveSum([1, -2, 3, 4, 5]);
+//or
+function positiveSum(arr) {
+  var sum = 0;
+  arr.forEach(function (v, i, a) {
+    if (v > 0) { sum += v; }
+  });
+  return sum;
+}
+positiveSum([1, -2, 3, 4, 5]);
+//-----------------------------------------------ok
+
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+// The function takes a name as its only argument, and returns one of the following strings:
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+function areYouPlayingBanjo(name) {
+  for (nameNew of name) {
+    if (nameNew === 'R' || nameNew === 'r') {
+      return `${name} plays banjo`;
+    } else {
+      return `${name} does not play banjo`;
+    }
+  }
+}
+areYouPlayingBanjo("Ringo");
+//-----------------------------------------------ok
+
+
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+//   Examples
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+// Notes
+// All numbers are valid Int32, no need to validate them.
+// There will always be at least one number in the input string.
+// Output string must be two numbers separated by a single space, and highest number is first.
+function highAndLow(numbers) {
+  let array = numbers.split(' '); // как работает пробел и запятая
+  // console.log(array);
+  // console.log(Math.max(...array), Math.min(...array));
+  let numNewOne = Math.max(...array);
+  let numNewTwo = Math.min(...array);
+  return `${numNewOne} ${numNewTwo}`;
+}
+highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+//or
+function highAndLow(numbers) {
+  let arr = numbers.split(' ').map(Number);
+  return Math.max(...arr) + ' ' + Math.min(...arr);
+}
+highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+//or
+function highAndLow(numbers) {
+  var arr = numbers.split(' ').sort(function (a, b) { return a - b });
+  return arr[arr.length - 1] + ' ' + arr[0];
+} 2
+highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+//-----------------------------------------------ok
+
+
+
 
 
