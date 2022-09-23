@@ -292,6 +292,33 @@ const generator = sequence(10, 3);
 sequence(7, 2);
 //-----------------------------------------------err
 
+
+
+// Напишите функцию, которая принимает массив с разными числами, а возвращает максимальное произведение двух чисел из этого массива.
+// Пример входных параметров [1, 3, 2, 2, 3, 0]
+// Ожидается на выходе 9
+
+function Product(arr) {
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  let num2 = arr.slice(-2,);
+  num2 = num2[0] * num2[1];
+  console.log(num2);
+  return num2
+}
+Product([1, 3, 2, 2, 3, 0]);
+//or
+function Product(arr) {
+  arr.sort(function (a, b) {
+    return b - a;
+  });
+  arr = arr[0] * arr[1];
+  console.log(arr);
+  return arr
+}
+Product([1, 3, 2, 2, 3, 0]);
+
 //codewar
 
 // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
