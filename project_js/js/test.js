@@ -17,3 +17,16 @@ console.log(id);
 
 let userId = obj.id;
 console.log(userId);
+
+
+
+
+
+
+// 2 && 1 && null && 0 && undefined
+// null
+
+// let str = "Hello";
+// str.something = 5;
+// alert(str.something); 
+// undefined
