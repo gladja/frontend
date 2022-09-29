@@ -1,32 +1,17 @@
+function findLongestWord(string) {
+    let arrayNew = string.split(' ');
+    // console.log(arrayNew);
+    let longestWord = 0;
+    for (let i = 0; arrayNew.length > i; i++) {
+        // console.log(arrayNew[i].length);
+        if (arrayNew[i].length > longestWord) {
+            longestWord = arrayNew[i].length;
+            // console.log(longestWord);
+        }
+    }
+    console.log(longestWord);
+    return longestWord;
 
-//Получите из объекта obj значение id в констанду id не используя выражение obj.id
-
-const obj = {
-    id: 5,
-    token: 12343423
-};
-
-let key;
-obj.key = 'user';
-console.log(obj);
-
-const { id } = obj; // как это работает
-console.log(id);
-
-// Получите из объекта obj значение id и разместите его в константу userId.
-
-let userId = obj.id;
-console.log(userId);
-
-
-
-
-
-
-// 2 && 1 && null && 0 && undefined
-// null
-
-// let str = "Hello";
-// str.something = 5;
-// alert(str.something); 
-// undefined
+    // Change code above this line
+}
+findLongestWord("The quick brown fox jumped over the lazy dog");

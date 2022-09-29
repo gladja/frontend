@@ -1,5 +1,5 @@
 Sort //- сортирует массив на месте, меняя в нём порядок элементов.
-// синтаксис: sort(function);
+// синтаксис: sort(function() {});
 
 // Аргументы:
 // function - мы передаем функцию для нужной нам сортировкки, если значение агрмента будет без
@@ -35,5 +35,13 @@ console.log(array); // (6) [45, 11, 6, 2, 1, 0]
 
 
 Revers // - меняет порядок элементовв в массиве на обратный
+// синтаксис: revers();
+
 let arr = ['Alex', 'Jon', 'Bob'];
 console.log(arr.reverse()); // (3) ['Bob', 'Jon', 'Alex']
+
+// создадим новый массив и сделаем реверс его
+let arr = ['Alex', 'Jon', 'Bob'];
+let newArr = arr.concat().reverse();
+console.log(arr);
+console.log(newArr);

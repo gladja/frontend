@@ -610,7 +610,97 @@ function highAndLow(numbers) {
 highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
 //-----------------------------------------------ok
 
+/////////////////////////////////////////////////////////////////////////////////////
+
+// Дан массив с числами. Создайте новый массив, состоящий из квадратов этих чиссел.
+let arrayNumber = [1, 2, 3, 4, 5];
+let squareNumber = [];
+
+arrayNumber.forEach(function (item) {
+  squareNumber.push(item ** 2);
+});
+console.log(squareNumber); // (5) [1, 4, 9, 16, 25]
+//or
+let arrayNumber = [1, 2, 3, 4, 5];
+let squareNumber = [];
+
+arrayNumber.forEach(item => squareNumber.push(item ** 2));
+console.log(squareNumber); // (5) [1, 4, 9, 16, 25]
+//-----------------------------------------------ok
 
 
 
+// Дан массив с числами. Найдите сумму этих чисел.
+let arrayNumber = [1, 2, 3, 4, 5];
+let sumNumber = 0;
 
+arrayNumber.forEach(item => sumNumber += item);
+console.log(sumNumber); // 15
+//-----------------------------------------------ok
+
+
+
+//Дан массив с числами. Сделайте из него массив, состоящий из квадратов этих чисел.
+let arrayNumber = [1, 2, 3, 4, 5];
+let squareNumber = arrayNumber.map(function (item) {
+  return item ** 2;
+});
+console.log(squareNumber);
+//-----------------------------------------------ok
+
+
+
+//Дан массив с числами. Проверьте то, что все элементы в массиве больше нуля.
+let arrayNumber = [1, 2, 3, 4, 5];
+let num = arrayNumber.every(item => item > 0);
+console.log(num);
+//-----------------------------------------------ok
+
+
+
+//Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы.
+let arrayNumber = [1, 2, 3, 4, -5];
+let num = arrayNumber.some(item => item < 0);
+console.log(num);
+//-----------------------------------------------ok
+
+
+
+//Дан массив с числами. Оставьте в нем только отрицательные числа.
+let arrayNumber = [1, -2, 3, 4, -5];
+let num = arrayNumber.filter(item => item < 0);
+console.log(num);
+//-----------------------------------------------ok
+
+
+
+//Дан массив с числами. Оставьте в нем только четные числа.
+let arrayNumber = [1, -2, 3, 4, -5];
+let num = arrayNumber.filter(item => item % 2 === 0);
+console.log(num);
+//-----------------------------------------------ok
+
+
+
+//Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов.
+let arrayString = ['BMW', 'Toyota', 'Bentley', 'CHRYSLER', 'CITROEN', 'Audi'];
+let newStr = arrayString.filter(item => item.length > 5);
+console.log(newStr);
+//-----------------------------------------------ok
+
+
+
+//Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. Оставьте в нем только подмассивы.
+let arrayNumber = [1, 2, [3, 4], 5, [6, 7]];
+let newArr = arrayNumber.filter(item => item.length > 1);
+console.log(newArr);
+//-----------------------------------------------ok
+
+
+//Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
+let arrayNumber = [1, -2, 3, 4, -5];
+let num = arrayNumber.filter(item => item < 0);
+console.log(num);
+let sumNumber = 0;
+num.forEach(item => sumNumber += item);
+console.log(sumNumber);
