@@ -61,21 +61,21 @@ function calculateEngravingPrice(message, pricePerWord) {
     // Change code below this line
     let arrayStr = message.split(' ');
     console.log(arrayStr.length * pricePerWord);
-    return arrayStr.length * pricePerWord
+    return arrayStr.length * pricePerWord;
 }
 calculateEngravingPrice("JavaScript is in my blood", 10);
 
 // ES6: Как разделить с деструктуризацией массива
 // ECMAScript2015 (ES6) представил более инновационный способ извлечения элемента из массива и присвоения его переменной. Этот умный синтаксис известен как Array Destructuring. Мы можем использовать это с split() метод, чтобы легко назначить вывод переменной с меньшим количеством кода.
 
-let name = 'Tapas Adhikary';
-let [firstName, lastName] = name.split(' ');
+let nameUser = 'Tapas Adhikary';
+let [firstName, lastName] = nameUser.split(' ');
 console.log(firstName); //Tapas
 console.log(lastName); //Adhikary
 
 
 
-Join // - преобразовывает массив в строку с заданным разделителем
+Join // - преобразовывает массив в строку с заданным разделителем, в новый массив
 // Cинтаксис: arr.join(separator);
 
 // Аргумент:

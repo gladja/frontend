@@ -33,6 +33,18 @@ let array = [...arr].sort((a, b) => b - a); //стрелочная функци
 console.log(arr); // без изменений так как мы использовали спред или высыпание
 console.log(array); // (6) [45, 11, 6, 2, 1, 0]
 
+//Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
+function findLongestWord(string) {
+    const arrayNew = string.split(' ');
+    // console.log(arrayNew);
+    arrayNew.sort((a, b) => {
+        return b.length - a.length;
+    });
+    console.log(arrayNew[0]);
+}
+findLongestWord("The quick brown fox jumped over  the lazy dog");
+
+
 
 Revers // - меняет порядок элементовв в массиве на обратный
 // синтаксис: revers();

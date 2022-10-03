@@ -244,7 +244,7 @@ function sum(num) {
   }
   return s
 }
-sum([1, 5.2, 4, 0, -1]);
+numArray([1, 5.2, 4, 0, -1]);
 //-----------------------------------------------ok
 
 
@@ -606,11 +606,11 @@ highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
 function highAndLow(numbers) {
   var arr = numbers.split(' ').sort(function (a, b) { return a - b });
   return arr[arr.length - 1] + ' ' + arr[0];
-} 2
+}
 highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
 //-----------------------------------------------ok
 
-/////////////////////////////////////////////////////////////////////////////////////
+
 
 // Дан массив с числами. Создайте новый массив, состоящий из квадратов этих чиссел.
 let arrayNumber = [1, 2, 3, 4, 5];
@@ -618,6 +618,14 @@ let squareNumber = [];
 
 arrayNumber.forEach(function (item) {
   squareNumber.push(item ** 2);
+});
+console.log(squareNumber); // (5) [1, 4, 9, 16, 25]
+//or
+let arrayNumber = [1, 2, 3, 4, 5];
+let squareNumber = [];
+
+arrayNumber.forEach(function (item, index) {
+  squareNumber[index] = item ** 2;
 });
 console.log(squareNumber); // (5) [1, 4, 9, 16, 25]
 //or
@@ -694,7 +702,16 @@ console.log(newStr);
 let arrayNumber = [1, 2, [3, 4], 5, [6, 7]];
 let newArr = arrayNumber.filter(item => item.length > 1);
 console.log(newArr);
+//or
+let arrayNumber = [1, 2, [3, 4], 5, [6, 7]];
+let newArr = arrayNumber.filter(item => Array.isArray(item));
+console.log(newArr);
+//or
+let arrayNumber = [1, 2, [3, 4], 5, [6, 7]];
+let newArr = arrayNumber.filter(Array.isArray);
+console.log(newArr);
 //-----------------------------------------------ok
+
 
 
 //Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
@@ -704,3 +721,63 @@ console.log(num);
 let sumNumber = 0;
 num.forEach(item => sumNumber += item);
 console.log(sumNumber);
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+//Создайте объект obj. Выведите на экран элемент с ключом 'c' двумя способами: через квадратные скобки и как свойство объекта:
+const obj = { a: 1, b: 2, c: 3 };
+obj.c;
+obj['c'];
+
+
+
+// Создайте массив заработных плат obj. Выведите на экран зарплату Пети и Коли.
+const obj = { Коля: '1000', Вася: '500', Петя: '200' };
+obj.Петя;
+obj.Коля;
+
+
+
+// Напишите программу, которая выводит через console.log все числа от 1 до 100, с двумя исключениями.Для чисел, нацело делящихся на 3, она должна выводить ‘Fizz’,
+// а для чисел, делящихся на 5(но не на 3) – ‘Buzz’.Когда сумеете – исправьте её так, чтобы она выводила «FizzBuzz» для всех чисел, которые делятся и на 3 и на 5.
+const num = 100;
+for (let i = 1; i <= num; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  } else {
+    console.log(i);
+  }
+}
+
+
+
+// Сумма диапазона.  Напишите функцию range, принимающую два аргумента, начало и конец диапазона, и возвращающую массив, который содержит все числа из него, включая начальное и конечное.Затем напишите функцию sum, принимающую массив чисел и возвращающую их сумму. Запустите указанную выше инструкцию и убедитесь, что она возвращает 55.В качестве бонуса дополните функцию range, чтобы она могла принимать необязательный третий аргумент – шаг для построения массива. Если он не задан, шаг равен единице. Вызов функции range(1, 10, 2) должен будет вернуть [1, 3, 5, 7, 9]. Убедитесь, что она работает с отрицательным шагом так, что вызов range(5, 2, -1) возвращает [5, 4, 3, 2].
+// `console.log(sum(range(1, 10)));
+// // → 55
+// console.log(range(5, 2, -1));
+// // → [5, 4, 3, 2]`
+const numArray = [];
+function range(a, b, c = 1) {
+  if (b <= a) {
+    for (let i = a; i >= b; i += c) {
+      numArray.push(i);
+    }
+  } else {
+    for (let i = a; i <= b; i += c) {
+      numArray.push(i);
+    }
+  }
+  console.log(numArray);
+  let sumArray = 0;
+  const sum = numArray.map(item => sumArray += item);
+  console.log(sumArray);
+}
+// range(1, 10);
+range(1, 10, 2);
+// range(5, 2, -1);

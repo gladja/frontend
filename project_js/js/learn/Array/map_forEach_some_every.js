@@ -76,13 +76,3 @@ console.log(num);
 let arrayNumber = [1, 2, 3, 4, -5];
 let num = arrayNumber.some(item => item < 0)
 console.log(num);
-
-
-
-Fliter // - используется для фильтрации массива через функцию. Он создаёт новый массив, в который войдут только те элементы arr, для которых вызов callback(item, i, arr) возвратит true.
-// Cинтаксис: arr.flter(function(item, index, array) {});
-
-// Аргументы:
-// item - значение элементов массива.
-// index - индекс элемента массива.
-// array - весь массив.
