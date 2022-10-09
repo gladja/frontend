@@ -616,7 +616,7 @@ highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
 let arrayNumber = [1, 2, 3, 4, 5];
 let squareNumber = [];
 
-arrayNumber.forEach(function (item) {
+arrayNumber.forEach(function (item) { 
   squareNumber.push(item ** 2);
 });
 console.log(squareNumber); // (5) [1, 4, 9, 16, 25]
@@ -698,7 +698,8 @@ console.log(newStr);
 
 
 
-//Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. Оставьте в нем только подмассивы.
+//Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. Оставьте в нем
+// только подмассивы.
 let arrayNumber = [1, 2, [3, 4], 5, [6, 7]];
 let newArr = arrayNumber.filter(item => item.length > 1);
 console.log(newArr);
@@ -721,6 +722,7 @@ console.log(num);
 let sumNumber = 0;
 num.forEach(item => sumNumber += item);
 console.log(sumNumber);
+//-----------------------------------------------ok
 
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -730,6 +732,7 @@ console.log(sumNumber);
 const obj = { a: 1, b: 2, c: 3 };
 obj.c;
 obj['c'];
+//-----------------------------------------------ok
 
 
 
@@ -737,6 +740,7 @@ obj['c'];
 const obj = { Коля: '1000', Вася: '500', Петя: '200' };
 obj.Петя;
 obj.Коля;
+//-----------------------------------------------err
 
 
 
@@ -754,6 +758,7 @@ for (let i = 1; i <= num; i++) {
     console.log(i);
   }
 }
+//-----------------------------------------------ok
 
 
 
@@ -785,3 +790,53 @@ function range(a, b, c = 1) {
 // range(1, 10);
 range(1, 10, 2);
 // range(5, 2, -1);
+//or
+function range(a, b, c = 1) {
+
+  let result, sumArray = 0;
+
+  if (
+    typeof a !== 'number' ||
+    typeof b !== 'number' ||
+    typeof c !== 'number'
+  ) {
+    result = 'Arguments must be numbers';
+    return result;
+  }
+  if (c === 0) {
+    result = 'Step can`t be = 0 !';
+    return result;
+  }
+  if (a > b && c > 0) {
+    result = 'You have a mistake';
+    return result;
+  }
+  if (a < b && c < 0) {
+    result = 'You have a mistake';
+    return result;
+  }
+  result = [];
+
+  if (a > b && c < 0) {
+    for (let i = a; i >= b; i += c) {
+      result.push(i);
+      sumArray += i;
+    }
+    console.log(sumArray);
+    console.log(result);
+    return result;
+  }
+
+  for (let i = a; i <= b; i += c) {
+    result.push(i);
+    sumArray += i;
+  }
+  console.log(sumArray);
+  console.log(result);
+  // numArray.forEach(item => sumArray += item);
+  return console.log(result);
+}
+// range(1, 10);
+// range(1, 10, 2);
+range(5, 2, -1);
+//-----------------------------------------------ok
