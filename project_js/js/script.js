@@ -840,3 +840,40 @@ function range(a, b, c = 1) {
 // range(1, 10, 2);
 range(5, 2, -1);
 //-----------------------------------------------ok
+
+
+
+// We need a function that can transform a string into a number. What ways of achieving this do you know?
+// Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation ' +
+// 'of an integral number.
+const stringToNumber = function(str){
+  str = +str;
+  console.log(str)
+  return str;
+}
+stringToNumber("1234")
+//or
+const stringToNumber = function(str){
+  return +str;
+}
+stringToNumber("1234")
+//-----------------------------------------------ok
+
+
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number
+// is already negative?
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+function makeNegative(num) {
+  if(num > 0) {
+    num *= -1;
+    console.log(num);
+    return num;
+  }
+  console.log(num);
+  return num;
+}makeNegative(0);
+//-----------------------------------------------ok
