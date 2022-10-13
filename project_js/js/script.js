@@ -876,4 +876,35 @@ function makeNegative(num) {
   console.log(num);
   return num;
 }makeNegative(0);
+//or
+function makeNegative(num) {
+  return -Math.abs(num);
+}
+//or
+function makeNegative(num) {
+  return num > 0 ? -num : num;
+}
+//-----------------------------------------------ok
+
+
+
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+// Give your answer as a string matching "odd" or "even".
+function oddOrEven(array) {
+  let sumNumber = 0;
+  array.forEach(item => sumNumber +=item);
+  console.log(sumNumber);
+  if (sumNumber % 2 === 0) {
+    console.log('even');
+    return 'even';
+  } else {
+    console.log('odd');
+    return 'odd';
+  }
+}
+oddOrEven([0, 1, 5]);
+//or
+function oddOrEven(arr) {
+  return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+}
 //-----------------------------------------------ok
