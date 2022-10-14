@@ -1,4 +1,22 @@
-/*.content {*/
-/*    grid-area: c;*/
-/*    background-color: cornflowerblue;*/
-/*}*/
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    padding: 20px;
+}
+
+.dialogsItem {
+
+}
+
+.dialog {
+
+}
+
+.messages {
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+
+.message {
+
+}
