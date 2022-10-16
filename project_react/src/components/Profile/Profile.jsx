@@ -1,27 +1,25 @@
 import {React} from 'react';
 import css from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+// let postData = [
+//      {id: 1, message: 'Hi, how are you?', likeCount: 10},
+//      {id: 2, message: 'Fine and you?', likeCount: 12},
+//      {id: 3, message: 'YO', likeCount: 1},
+//  ]; переносим данный выше в app.js
+
+const Profile = (props) => {
     return (
         <div>
             <div>
-                <img
-                    src='https://st.depositphotos.com/1010338/2099/i/450/depositphotos_20999943-stock-photo-chaise-lounge-and-umbrella-on.jpg'
-                    alt='img'/>
-            </div>
-            <div>
-                <div className={css.avatar}>
-                    <img src='https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png' alt='avatar'/>
-                </div>
-                ava + description
-            </div>
-            <div>
-                <MyPosts/>
+                <ProfileInfo />
+                <MyPosts {...props} />
+                {/*можно 2 способами*/}
+                {/*<MyPosts postData={props.postData} />*/}
             </div>
         </div>
     );
 }
 
 export default Profile;
-
