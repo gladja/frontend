@@ -10,10 +10,10 @@ let state = {
 
     dialogsPage: {
         dialogsData: [
-            {id: 1, name: 'Alex'},
-            {id: 2, name: 'Stas'},
-            {id: 3, name: 'Luda'},
-            {id: 4, name: 'Ivan'},
+            {id: 1, name: 'Alex', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
+            {id: 1, name: 'Stas', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
+            {id: 3, name: 'Luda', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
+            {id: 4, name: 'Ivan', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
         ],
         messagesData: [
             {id: 1, message: 'Hi'},
@@ -21,7 +21,14 @@ let state = {
             {id: 3, message: 'Hello'},
             {id: 4, message: 'How are you?!'},
         ],
-    }
+    },
+
+    sidebar: {
+        friends: [
+            {name: 'Alex', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
+            {name: 'Stas', avatar: 'https://www.pngall.com/wp-content/uploads/12/Avatar-PNG-Images-HD.png'},
+        ],
+    },
 };
 
 export default state;

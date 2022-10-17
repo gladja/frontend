@@ -1,0 +1,11 @@
+.item {
+    display: flex;
+}
+.avatar img {
+    width: 30px;
+}
+
+.name {
+    font-size: 10px;
+    color: white;
+}

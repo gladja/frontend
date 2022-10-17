@@ -17,3 +17,11 @@
     border-radius: 5px;
     padding: 0 10px;
 }
+
+.nav__friends {
+    padding-top: 30px;
+}
+
+.nav__friend {
+    padding: 10px;
+}

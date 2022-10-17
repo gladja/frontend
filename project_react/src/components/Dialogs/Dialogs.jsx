@@ -1,4 +1,4 @@
-import {React} from "react";
+import React from "react";
 import css from './Dialogs.module.css';
 import Dialog from './DialogItem/DialogsItem';
 import Message from "./Message/Message";
@@ -20,17 +20,22 @@ import Message from "./Message/Message";
 
 
 const Dialogs = (props) => {
-    let dialogsElements = props.dialogsData.map((data) => <Dialog name={data.name} id={data.id} />)
-    let messagesElements = props.messagesData.map((data) => <Message message={data.message} id={data.id} />)
+    let dialogsElements = props.dialogsData.map((data) => <Dialog name={data.name} id={data.id} avatar={data.avatar}/> );
+    let messagesElements = props.messagesData.map((data) => <Message message={data.message} id={data.id} />);
 
     return (
         <div className={css.dialogs}>
-            <div className={css.dialogsItem}>
-                {dialogsElements}
-                {/*<Dialog name={dialogsData[0].name} id={dialogsData[0].id} />*/}
-                {/*<Dialog name='Stas' id='2'/>*/}
-                {/*<Dialog name='Luda' id='3'/>*/}
-                {/*<Dialog name='Ivan' id='4'/>*/}
+            <div className={css.userName}>
+                <div className={css.avatar}>
+                    {/*{avatarElements}*/}
+                </div>
+                <div className={css.dialogsItem}>
+                    {dialogsElements}
+                    {/*<Dialog name={dialogsData[0].name} id={dialogsData[0].id} />*/}
+                    {/*<Dialog name='Stas' id='2'/>*/}
+                    {/*<Dialog name='Luda' id='3'/>*/}
+                    {/*<Dialog name='Ivan' id='4'/>*/}
+                </div>
             </div>
             <div className={css.messages}>
                 {messagesElements}

@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -17,14 +17,14 @@ const App = (props) => {
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <Navbar />
+        <Navbar friends={props.state.sidebar.friends} />
         <div className='app-wrapper-content'>
           <Routes>
             <Route path='/profile'
                    element={<Profile postData={props.state.profilePage.postData} />} />
             <Route path='/dialogs'
                    element={<Dialogs dialogsData={props.state.dialogsPage.dialogsData}
-                                     messagesData={props.state.dialogsPage.messagesData} />} />
+                                     messagesData={props.state.dialogsPage.messagesData}/>} />
             <Route path='*' />
           </Routes>
         </div>

@@ -1,22 +1,19 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 1.5fr 8fr;
     padding: 20px;
 }
 
-.dialogsItem {
-
+.dialog {
+    display: grid;
+    grid-template-columns: 50px 1fr;
 }
 
-.dialog {
-
+.avatar img {
+    width: 30px;
 }
 
 .messages {
     border-left: 1px solid black;
     padding-left: 20px;
-}
-
-.message {
-
 }
