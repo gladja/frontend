@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+git init
+<!--инициализация репозитория-->
+
+git status
+<!--текущий статус или что происходит на проекте-->
+<!--можем видеть branch ответления.-->
+
+git add index.html
+git add .
+<!--гид будет теперь следить за файлом index.html-->
+<!--. добавит все файлы-->
+
+git rm –cached index.html
+<!--перестать следить за фалом-->
+
+<!--COMMIT-->
+git commit -m ”text”
+git commit -am ”text”
+<!--фикс нашей версии-->
+<!-- -m”” - назване нашей версии-->
+<!--(кто сделал, когда, описание)-->
+<!--сделать и add и коммит одной командой-->
+git commit --amend
+<!--изменить последний комит-->
+
+<!--BRANCH-->
+git branch
+<!--в какой ветке мы находимся-->
+git branch test
+<!--создал доп. ветку с именем test-->
+git branch -D test
+<!--удалил ветку test-->
+git checkout test
+<!--смена ветки на ветку test-->
+git checkout -b test
+<!--создаю новую ветку и сразу на нее переключаюсь-->
+
+git merge test
+<!--соединяет ту ветку в которой сейчас нахожусь (main) с веткой test-->
+
+git rebase
+<!--создает линейную последовательность сохранений-->
+
+git push
+<!--отправить на гидхаб-->
+git pull
+<!--скачать с репозитория-->
+git clone https://github.com/gladja/frontend.git
+<!--скопировать данный репозиторий-->
+
+
+
+
+
+
