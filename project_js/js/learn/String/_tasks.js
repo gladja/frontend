@@ -12,19 +12,16 @@
 // Ожидается на выходе
 // "yes"
 
-
 function Anagram(string1, string2) {
-    console.log(string1.split('').sort().join(''));
-    console.log(string2.split('').sort().join(''));
-    function stringChange(str) {
-        return str.split('').sort().join('');
-    }
-    return stringChange(string1) === stringChange(string2) ? 'yes' : 'no';
+  console.log(string1.split("").sort().join(""));
+  console.log(string2.split("").sort().join(""));
+  function stringChange(str) {
+    return str.split("").sort().join("");
+  }
+  return stringChange(string1) === stringChange(string2) ? "yes" : "no";
 }
 Anagram("school master", "the classroom");
 Anagram("one", "two");
-
-
 
 // In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of
 // the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or
@@ -34,34 +31,48 @@ Anagram("one", "two");
 // "ATTGC" --> "TAACG"
 // "GTAT" --> "CATA"
 
-function DNAStrand(dna){
-    let newDNA ='';
-    for( let i = 0; i < dna.length; i++) {
-        if(dna[i] === 'A') {
-            newDNA += 'T';
-        } else if  (dna[i] === 'T') {
-            newDNA += 'A';
-        } else if (dna[i] === 'G') {
-            newDNA += 'C';
-        } else if (dna[i] === 'C') {
-            newDNA += 'G';
-        }
-        console.log(newDNA);
+function DNAStrand(dna) {
+  let newDNA = "";
+  for (let i = 0; i < dna.length; i++) {
+    if (dna[i] === "A") {
+      newDNA += "T";
+    } else if (dna[i] === "T") {
+      newDNA += "A";
+    } else if (dna[i] === "G") {
+      newDNA += "C";
+    } else if (dna[i] === "C") {
+      newDNA += "G";
     }
-    return newDNA;
+    console.log(newDNA);
+  }
+  return newDNA;
 }
 DNAStrand("ATTGC");
 //or
-function DNAStrand(dna){
-    const table = {
-        C : 'G',
-        G : 'C',
-        A : 'T',
-        T : 'A'
-    };
-    return dna.split('').map(function(cv) {
-        return table[cv];
-    }).join('');
+function DNAStrand(dna) {
+  const table = {
+    C: "G",
+    G: "C",
+    A: "T",
+    T: "A",
+  };
+  return dna
+    .split("")
+    .map(function (cv) {
+      return table[cv];
+    })
+    .join("");
 }
 DNAStrand("ATTGC");
 //-----------------------------------------------ok
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+function reverseWords(str) {
+  const stringRevers = str.split("").reverse().join("");
+  const wordRevers = stringRevers.split(" ").reverse().join(" ");
+  console.log(wordRevers);
+  return wordRevers;
+}
+reverseWords("The quick brown fox jumps over the lazy dog.");
