@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/vue-scrollto@2.7.9/vue-scrollto.js"></script>
+</head>
+
+<body>
+<div id="app" v-bind:title="item">
+	<p>{{ message + id }}</p>
+	<p>{{ id }}</p>
+	<h1 v-if="status === 6">Value true</h1>
+	<h1 v-else="status">Value false</h1>
+</div>
+
+<div id="app-2">
+
+	<ul>
+		<li v-for="item in list">
+			{{ item }}
+		</li>
+	</ul>
+
+	<ul>
+		<li v-for="item in users">
+			{{ item.id }} : {{ item.name }}
+		</li>
+	</ul>
+
+	<table border="1">
+		<thead>
+		<th>ID</th>
+		<th>Name</th>
+		</thead>
+		<tbody>
+		<tr v-for="item in users">
+			<td>{{ item.id }}</td>
+			<td>{{ item.name }}</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<div id="app-3">
+	<br>
+	<button @click="sumNumber">Value: {{counter}}</button>
+</div>
+
+<div id="app-4">
+	<br>
+	<button type="button" @click="getHashtags">Download</button>
+
+	<ul>
+		<li v-for="hashtag in hashtags">
+			{{hashtag}}
+		</li>
+	</ul>
+</div>
+
+
+<div id="app-5">
+	<br>
+	<button type="button" @click="trueFalse">true/false</button>
+	<p>{{ }}</p>
+</div>
+
+<!---->
+
+<div id="HDApp">
+	<a href="#" v-scroll-to="{ el: '#comments', duration: 2000, }">click</a>
+	<!--	<button v-scroll-to="{ el: '#comments' }">-->
+	<!--		Scroll to #comments (with el)-->
+	<!--	</button>-->
+
+	<h4 id="comments">Hi. welcome to ItSolutionStuff.com</h4>
+
+</div>
+
+<!---->
+
+<div id="home-work">
+	<h2>select amount product</h2>
+	<button @click="minus">-</button>
+	<input
+			type="number"
+			:value="num"
+			:min="min"
+			:max="max"
+	/>
+	<button @click="plus">+</button>
+</div>
+
+<script>
+	const app = new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello!',
+			item: 'test',
+			id: '10',
+			status: 6,
+			number: 1,
+		},
+	})
+
+	const app2 = new Vue({
+		el: '#app-2',
+		data: {
+			list: ['one', 'two', 'three'],
+			users: [
+				{id: 1, name: 'Alex'},
+				{id: 2, name: 'Jon'},
+			],
+		},
+
+	})
+
+	const app3 = new Vue({
+		el: '#app-3',
+		data: {
+			counter: 0,
+		},
+
+		methods: {
+			sumNumber() {
+				this.counter++;
+			}
+		}
+	})
+
+	const app4 = new Vue({
+		el: '#app-4',
+		data: {
+			hashtags: [],
+			url: {
+				hashtags: 'https://dka-develop.ru/api?type=hashtag',
+				city: 'https://dka-develop.ru/api?type=city',
+			}
+		},
+
+		methods: {
+			getHashtags() {
+				axois.get(this.url.city).then((response) => {
+					console.log(response.data);
+					this.hashtags = response.data;
+				});
+			}
+		}
+	})
+
+	const app5 = new Vue({
+		el: '#app-5',
+		data: {
+			show: true,
+		},
+
+		methods: {
+			trueFalse() {
+				let show = this.show;
+				this.show = !show;
+				console.log(show)
+			}
+		}
+	})
+
+	new Vue({
+		el: '#HDApp',
+		methods: {}
+	})
+
+	const homeWork = new Vue({
+		el: '#home-work',
+		data: {
+			num: 1,
+			min: 1,
+			max: 10,
+		},
+		methods: {
+			minus() {
+				this.num--
+				if (this.num < 1) {
+					this.num = 1
+				}
+			},
+			plus() {
+				this.num++
+				if (this.num >= 10) {
+					this.num = 10
+				}
+			},
+		}
+	})
+
+</script>
+</body>
+
+</html>
