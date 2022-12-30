@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test-vue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+</head>
+<body>
+<div id="app">
+    <h1>I found you!</h1>
+    <input type="text" v-model="foundName"/>
+<!--    <input type="text" :value="foundName" @input="foundName = $event.target.value"/>-->
+
+
+    <h4 class="title">Total name: {{ users.length }} found: {{getFilterName.length}}</h4>
+
+    <div
+            v-for="(user, idx) in getFilterName"
+            :key="idx"
+            class="name"
+    >
+        {{ user.name }}
+    </div>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                foundName: '',
+                users: [
+                    {
+                        id: 1,
+                        name: 'Alex',
+                    },
+                    {
+                        id: 2,
+                        name: 'Stas',
+                    },
+                    {
+                        id: 3,
+                        name: 'Ivan',
+                    },
+                    {
+                        id: 4,
+                        name: 'Jon',
+                    },
+                    {
+                        id: 5,
+                        name: 'Angel',
+                    },
+]
+            }
+        },
+        computed: {
+            getFilterName() {
+                return this.users.filter(item => item.name.toLowerCase().includes(this.foundName.toLowerCase()))
+            }
+        }
+    })
+</script>
+</body>
+</html>
