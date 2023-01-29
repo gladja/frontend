@@ -1,12 +1,16 @@
-var number = function(busStops){
+const salaries1 = {
+    Manager: { salary: 1000, tax: "10%" },
+    Designer: { salary: 600, tax: "30%" },
+    Artist: { salary: 1500, tax: "15%" },}
+const team1 = [
+    { name: "Misha", specialization: "Manager" },
+    { name: "Max", specialization: "Designer" },
+    { name: "Vova", specialization: "Designer"},
+    { name: "Leo", specialization: "Artist"},]
 
-  let sum = 0
-  const sunBusStop = busStops.map(item => sum += (item[0]-item[1]));
-  // sunBusStop.map((item ,idx) =>  sum += item);
-  console.log(sunBusStop);
-  console.log(sum);
-  return sum;
-    };
+const financeReport1 = function  calculateTeamFinanceReport(salaries1, team1) {
 
-number([[10,0],[3,5],[5,8]]); //5
-number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]); //17
+}
+
+console.log(JSON.stringify(financeReport1))
+
