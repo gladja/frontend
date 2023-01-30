@@ -16,6 +16,9 @@
     <h2>Filter: {{ rowsSum.length }}  {{ filterSum.length }}</h2>
     <input type="text" v-model.trim="text" @keydown.enter="add"/>
     <button @click="add">add</button>
+
+    <div v-if="filterSum.length">line repeat</div>
+
     <ul>
         <li
                 v-for="(user, idx) in users"
@@ -36,7 +39,7 @@
             return {
                 text: '',
                 users: [],
-                // filter: [],
+                // filter: false,
             }
         },
 
@@ -57,12 +60,13 @@
                 const addText = {
                     name: this.text
                 };
-                    if (this.text === '' || this.text === this.filterSum.name) {
-                        console.log('Repeat');
+                    if (this.text === '' || this.text === this.filterSum[0]?.name) {
+                        // this.filter = true;
                         return;
                     }
                         this.users.push(addText);
                         this.text = '';
+                        // this.filter = false;
             },
 
 
