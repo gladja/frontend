@@ -67,3 +67,49 @@ for (let i = 1; i <= num; i++) {
         console.log(i);
     }
 }
+
+
+//Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all
+// if he was simply to buy and
+// sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+// Task
+// Write a function that returns both the minimum and maximum number of the given list/array.
+function minMax(arr){
+
+    const newMinMax = [];
+
+    const minNum = Math.min(...arr);
+    // console.log(minNum);
+
+    const maxNum = Math.max(...arr);
+    // console.log(maxNum);
+
+    newMinMax.push(minNum, maxNum);
+    console.log(newMinMax)
+    return newMinMax
+}
+
+//or
+function minMax(arr){
+    // console.log(arr);
+    let maxNum = 0;
+    let minNum = arr[0];
+
+    for (let i = 0; i < arr.length ; i++) {
+        // console.log(arr[i]);
+        if (arr[i] > maxNum) {
+            maxNum = arr[i];
+        }
+        if (arr[i] < minNum) {
+            minNum = arr[i];
+        }
+
+    }
+    console.log(`max: ${maxNum}`);
+    console.log(`min: ${minNum}`);
+
+}
+
+minMax([1, 2, 3, 4, 5]); // [1, 5]
+minMax([2334454, 5]); // [5, 2334454]
+minMax([5]); // [5, 5]

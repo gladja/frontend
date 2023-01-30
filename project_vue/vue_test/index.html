@@ -12,8 +12,7 @@
 </head>
 <body>
 <div id="app">
-    <h2>Add: {{text}} </h2>
-    <h2>Filter: {{ rowsSum.length }}  {{ filterSum.length }}</h2>
+    <h2>Add: {{text}}</h2>
     <input type="text" v-model.trim="text" @keydown.enter="add"/>
     <button @click="add">add</button>
 
@@ -38,28 +37,41 @@
         data() {
             return {
                 text: '',
+<<<<<<< HEAD
                 users: [],
                 // filter: false,
+=======
+                users: [
+                    // {
+                    //     id: 1,
+                    //     name: 'Alex',
+                    // },
+                    // {
+                    //     id: 2,
+                    //     name: 'Stas',
+                    // },
+                    // {
+                    //     id: 3,
+                    //     name: 'Ivan',
+                    // },
+                    // {
+                    //     id: 4,
+                    //     name: 'Jon',
+                    // },
+                    // {
+                    //     id: 5,
+                    //     name: 'Angel',
+                    // },
+                ]
+>>>>>>> 03c5a6fec7816ec56b2fa8a69d321259ed1d3ccf
             }
         },
-
-        computed: {
-
-            rowsSum() {
-                return this.users.filter(item => item.name.includes(this.text));
-            },
-
-            filterSum() {
-                return this.users.filter(item => item.name === this.text);
-            },
-        },
-
         methods: {
-
             add() {
                 const addText = {
                     name: this.text
                 };
+<<<<<<< HEAD
                     if (this.text === '' || this.text === this.filterSum[0]?.name) {
                         // this.filter = true;
                         return;
@@ -70,15 +82,19 @@
             },
 
 
+=======
+>>>>>>> 03c5a6fec7816ec56b2fa8a69d321259ed1d3ccf
 
 
+                    if (this.text.name === this.users.name) {
+                        this.users.push(addText);
+                    }
+            },
             remove(idx) {
                 // console.log(this.users[idx]);
                 this.users.splice(idx, 1);
 
-            },
-
-
+            }
         },
 
     })
