@@ -171,7 +171,7 @@ function nameСheck(nameFirst) {
     };
 
     function calc() {
-        const { viktor } = obj;
+        const { viktor } = obj;  // диструкторизация обьекта еще можно его переименовать { viktor: vkito }
         // console.log(viktor);
         const vi = {};
         for (let v of viktor) {
