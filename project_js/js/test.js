@@ -1,16 +1,25 @@
-function longest(s1, s2) {
-  const newArray = [...s1, ...s2];
-  let sortArray = "";
-
-  // console.log(newArray);
-  newArray.sort();
-  // console.log(newArray);
-
-  sortArray = newArray.filter(function (value, index, array) {
-    return value !== array[index - 1];
-  });
-
-  console.log(sortArray.join(""));
+String.prototype.toJadenCase = function () {
+    // str.toJadenCase()
+};
+let str = "How can mirrors be real if our eyes aren't real";
+let words = str.split(' ');
+let newStr = '';
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    newStr = words.join(' ');
 }
+// return words.join(' ');
+    console.log(newStr)
 
-longest("aretheyhere", "yestheyarehere"); // "aehrsty"
+
+//     test = str.toLowerCase().split(' ')
+//     console.log(test)
+//
+//
+// for (let i = 0; i < test.length; i++) {
+//     console.log(test[i])
+//     test[i] = test[i][0].toUpperCase()+ test[i].substring(1)
+
+
+// }
+// console.log(test.join(' '))

@@ -136,3 +136,127 @@ function calculateYears(principal, interest, tax, desired) {
   return year;
 }
 calculateYears(1000, 0.05, 0.18, 1100); //3
+
+
+
+// The museum of incredible dull things
+// The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with a plan to remove the most boring exhibitions. She gives them a rating, and then removes the one with the lowest rating.
+//
+// However, just as she finished rating all exhibitions, she's off to an important fair, so she asks you to write a program that tells her the ratings of the items after one removed the lowest one. Fair enough.
+//
+// Task
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+//
+//     Don't change the order of the elements that are left.
+//
+// Examples
+// * Input: [1,2,3,4,5], output = [2,3,4,5]
+//     * Input: [5,3,2,1,4], output = [5,3,2,4]
+//     * Input: [2,2,1,2,1], output = [2,2,2,1]
+
+function removeSmallest(numbers) {
+  let minNum = numbers[0];
+  let newArray = [];
+  let idx = [];
+
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (minNum > numbers[i]) {
+      minNum = numbers[i]
+    }
+  }
+  console.log(minNum)
+
+  idx = numbers.findIndex(item => item === minNum)
+  console.log(idx);
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(i)
+    console.log(idx)
+    if (idx !== i) {
+      newArray.push(numbers[i])
+    }
+  }
+  console.log(numbers)
+  console.log(newArray)
+  return [newArray];
+}
+
+// console.log(removeSmallest(numbers()))
+// console.log(newArray)
+removeSmallest([1, 2, 3, 4, 5])
+removeSmallest([2, 2, 1, 2, 1])
+removeSmallest([269, 168, 68, 317, 95, 34])
+
+
+
+
+for of //
+
+
+
+
+//   Time to win the lottery!
+//     Given a lottery ticket (ticket), represented by an array of 2-value arrays, you must find out if you've won the jackpot.
+// Example ticket:
+//     [ [ 'ABC', 65 ], [ 'HGR', 74 ], [ 'BYHT', 74 ] ]
+// To do this, you must first count the 'mini-wins' on your ticket. Each subarray has both a string and a number within it. If the character code of any of the characters in the string matches the number,
+// you get a mini win. Note you can only have one mini win per sub array.
+//     Once you have counted all of your mini wins, compare that number to the other input provided (win). If your total is more than or equal to (win), return 'Winner!'. Else return 'Loser!'.
+//     All inputs will be in the correct format. Strings on tickets are not always the same length.
+
+
+  function bingo(ticket, win) {
+    let winner = 0;
+    console.log(ticket[0][0])
+    console.log(win)
+
+    for (let i = 0; i < ticket.length; i++) {
+      console.log(ticket[i][0])
+      for (let j = 0; j < ticket[i][0].length; j++) {
+        console.log(ticket[i][0][j])
+        // console.log(ticket[i][0][j].charCodeAt())
+        // console.log(ticket[i][1])
+        if (ticket[i][0][j].charCodeAt() === ticket[i][1]) {
+          winner++
+          break
+        }
+        // console.log(ticket[i][0][j])
+      }
+    }
+    console.log(winner)
+    console.log(win)
+    if (winner >= win) return 'Winner!';
+    return 'Loser!'
+
+//or
+
+    for (const ticketElement of ticket) {
+      console.log(ticketElement)
+      for (const ticketElementElement of ticketElement[0]) {
+        console.log(ticketElementElement)
+        // console.log(ticketElement[1])
+        console.log(ticketElementElement.charCodeAt())
+        if (ticketElementElement.charCodeAt() === ticketElement[1]) {
+          winner++
+        }
+      }
+    }
+    console.log(winner)
+    return  winner >= win ? 'Winner!' : 'Loser!'
+
+// let arr2 = []
+//     ticket.forEach((item, i) => {
+//         console.log(item[0])
+//         arr2.push(item[0])
+//         console.log(arr2)
+//         // let arr2 =arr
+//         })
+//         console.log(arr2)
+//         arr2.forEach(itm => {
+//             console.log(itm)
+//     })
+
+  }
+
+bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 2)
+bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1)
