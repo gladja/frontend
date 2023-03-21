@@ -1,21 +1,16 @@
-const widths = [3, 2, 5, 6, 10, 11, 6, 8, 9, 13];
-const heights = [4, 8, 9, 12, 3, 4, 5, 15, 10, 5];
+const min = function (list) {
+  let minNumber = 0;
+  list.map((itm, index) => {
+    minNumber < itm;
+    minNumber = itm;
+  });
+  console.log(minNumber);
+  return minNumber;
+};
+console.log(min);
 
-let widthHigher = 0;
-let heightHigher = 0;
-let bigDiagonal = 0;
-
-for (let i = 0; i < widths.length; i++) {
-  if (widths[i] > heights[i]) {
-    widthHigher++;
-  } else {
-    heightHigher++;
-  }
-  const c = Math.pow(widths[i], 2) + Math.pow(heights[i], 2);
-  const diagonal = Math.sqrt(c);
-  if (diagonal > bigDiagonal) {
-    bigDiagonal = i;
-  }
-}
-console.log(bigDiagonal);
-console.log(`width: ${widthHigher} height: ${heightHigher}`);
+const max = function (list) {
+  return list[0];
+};
+min([-52, 56, 30, 29, -54, 0, -10]);
+max([4, 6, 2, 1, 9, 63, -134, 566]);

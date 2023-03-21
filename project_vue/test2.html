@@ -1,0 +1,68 @@
+<template>
+  <div>
+    <div class="flex justify-center">
+      <input type="text" v-model="zipcode" placeholder="Enter Zipcode" />
+      <button @click="getData(zipcode)"> Render </button>
+      <button @click="mainPage"> Main Page </button>
+      <button @click="ipLookup"> IP Lookup </button>
+    </div>
+    <div>
+      <h1> Results </h1>
+      <p> State: {{state}} </p>
+      <p> City: {{city}} </p>
+      <p> HTTP Referer: {{httpReferer}} </p>
+      <p> UTM Tags: {{utmTags}} </p>
+      <p> IP: {{ip}} </p>
+      <p> User Agent: {{userAgent}} </p>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "ZipCodeSearch",
+    data() {
+      return {
+        zipcode: "",
+        state: "",
+        city: "",
+        httpReferer: "",
+        utmTags: "",
+        ip: "",
+        userAgent: "",
+      };
+    },
+    methods: {
+      getData(zipcode) {
+        //API request to fetch data
+        axios.get("http://localhost:3000/data/" + zipcode).then(res => {
+          this.state = res.data.state;
+          this.city = res.data.city;
+          this.httpReferer = res.data.httpReferer;
+          this.utmTags = res.data.utmTags;
+          this.ip = res.data.ip;
+          this.userAgent = res.data.userAgent;
+        });
+      },
+      mainPage() {
+        //Redirect to main page
+        window.location.href = "http://localhost:8080/";
+      },
+      ipLookup() {
+        //API request to fetch data
+        axios.get("http://localhost:3000/ipLookup/" + this.ip).then(res => {
+          this.isp = res.data.isp;
+          this.city = res.data.city;
+          this.region = res.data.region;
+          this.country = res.data.country;
+        });
+      },
+    },
+  };
+</script>
+
+<style>
+  .justify-center {
+    justify-content: center;
+  }
+</style>
