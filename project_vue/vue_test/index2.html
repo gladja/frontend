@@ -48,12 +48,14 @@
 
       userFilter() {
         return Array.from(new Set(this.users));
+
       }
     },
     methods: {
       add() {
         if(this.text) {
           this.users.push(this.text);
+	        // console.log(text)
         }
       },
       remove(idx) {
